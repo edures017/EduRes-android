@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "867500896072",
+    "firebase_url": "https://edures-59af0.firebaseio.com",
+    "project_id": "edures-59af0",
+    "storage_bucket": "edures-59af0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:867500896072:android:aae34d63b931cf11974d7d",
+        "android_client_info": {
+          "package_name": "com.example.edures"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "867500896072-frj3jn3qbtbibl9aet9urobm0ceukjvj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.edures",
+            "certificate_hash": "673e39744cfa43524d021ea4e98c28b9daf9caa3"
+          }
+        },
+        {
+          "client_id": "867500896072-vpruvs7pafcv59mpffcd7pp0sk24g6se.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKBBMr6BpEJw29QEf-31bWlV69GxRea4w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "867500896072-vpruvs7pafcv59mpffcd7pp0sk24g6se.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
