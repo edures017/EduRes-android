@@ -2,11 +2,16 @@ package com.example.edures;
 
 import android.app.NotificationManager;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.media.RingtoneManager;
 import android.util.Log;
 
 import androidx.core.app.NotificationCompat;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
@@ -36,6 +41,11 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
      */
     @Override
     public void onNewToken(String token) {
-        Log.e("HERE","Refreshed token: " + token);
+        SharedPreferences tokenPref = getSharedPreferences("tokenFile",Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = tokenPref.edit();
+        editor.putString("token",token);
+        editor.commit();
+        Log.e("NTOKEN",token);
+        Log.e("FTOKEN", tokenPref.getString("token", "LOL"));
     }
 }

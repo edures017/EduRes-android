@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.messaging.FirebaseMessagingService;
 
 public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
@@ -24,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
     EditText email;
     EditText password;
     Button login;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

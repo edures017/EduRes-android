@@ -1,6 +1,7 @@
 package com.example.edures;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
@@ -17,6 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 
+
 public class Home extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,10 +32,16 @@ public class Home extends AppCompatActivity {
 
                     // Get new Instance ID token
                     String token = task.getResult().getToken();
-                    Home.this.getPreferences(Context.MODE_PRIVATE).edit().putString("token", token).apply();
+//                    Log.e("TOKEN", token);
+                    SharedPreferences tokenPref = getSharedPreferences("tokenFile", MODE_PRIVATE);
+                    tokenPref.edit().putString("token",token).commit();
+                //v.setTok(token);
             }
         });
-        String token = Home.this.getPreferences(Context.MODE_PRIVATE).getString("token", "empty :(");
+        SharedPreferences tokenPref = getSharedPreferences("tokenFile",MODE_PRIVATE);
+        String token = tokenPref.getString("token","DEFAULT");
+//        Log.e("TOK", tok);
+        Log.e("TOKEN", token);
         // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
