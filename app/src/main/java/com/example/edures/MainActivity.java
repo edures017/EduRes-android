@@ -31,6 +31,10 @@ public class MainActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser != null) {
+            Intent loggedIn = new Intent(MainActivity.this, Home.class);
+            startActivity(loggedIn);
+        }
         setContentView(R.layout.activity_main);
         login_text = (TextView) findViewById(R.id.login_text);
         email = (EditText) findViewById(R.id.email);
