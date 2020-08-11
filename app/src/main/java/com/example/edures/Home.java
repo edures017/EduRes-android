@@ -26,6 +26,7 @@ public class Home extends AppCompatActivity {
     Button alerts;
     Button profile;
     Button logout;
+    Button attendance;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,6 +84,15 @@ public class Home extends AppCompatActivity {
             public void onClick(View v) {
                 Intent profile = new Intent(Home.this, activity_user.class);
                 startActivity(profile);
+            }
+        });
+
+        attendance = findViewById(R.id.attendance);
+        attendance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent attendance = new Intent(Home.this, activity_attendance.class);
+                startActivity(attendance);
             }
         });
     }

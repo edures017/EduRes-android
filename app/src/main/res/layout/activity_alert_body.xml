@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F8DB92"
     tools:context=".activity_alert_body">
 
 
@@ -17,7 +18,10 @@
         android:layout_marginEnd="173dp"
         android:layout_marginRight="173dp"
         android:layout_marginBottom="445dp"
+        android:fontFamily="monospace"
         android:text="Body"
+        android:textColor="#0B0A0A"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +37,10 @@
         android:layout_marginEnd="176dp"
         android:layout_marginRight="176dp"
         android:layout_marginBottom="534dp"
+        android:fontFamily="monospace"
         android:text="Title"
+        android:textColor="#0C0C0C"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

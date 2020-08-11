@@ -3,6 +3,8 @@ package com.example.edures;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,7 +22,6 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
-    TextView login_text;
     EditText email;
     EditText password;
     Button login;
@@ -36,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(loggedIn);
         }
         setContentView(R.layout.activity_main);
-        login_text = (TextView) findViewById(R.id.login_text);
         email = (EditText) findViewById(R.id.email);
         password = (EditText) findViewById(R.id.password);
         login = (Button) findViewById(R.id.login);
@@ -64,6 +64,19 @@ public class MainActivity extends AppCompatActivity {
                             Log.e("TAG", "signInWithEmail:failure", task.getException());
                             Toast.makeText(MainActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
+                            AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(MainActivity.this);
+                            dlgAlert.setMessage("wrong password or email");
+                            dlgAlert.setTitle("Can't Login");
+                            dlgAlert.setPositiveButton("OK", null);
+                            dlgAlert.setCancelable(true);
+                            dlgAlert.create().show();
+
+                            dlgAlert.setPositiveButton("Ok",
+                                    new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int which) {
+
+                                        }
+                                    });
                         }
                     }
                 });
