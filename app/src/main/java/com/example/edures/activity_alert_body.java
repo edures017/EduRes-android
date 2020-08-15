@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
+import com.example.edures.ui.alerts.Alert;
+
 import java.util.ArrayList;
 
 public class activity_alert_body extends AppCompatActivity {

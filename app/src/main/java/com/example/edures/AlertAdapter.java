@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.content.Context;
 import android.widget.TextView;
 
+import com.example.edures.ui.alerts.Alert;
+
 import java.util.ArrayList;
 
 public class AlertAdapter extends BaseAdapter {
