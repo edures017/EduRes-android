@@ -14,12 +14,13 @@
         <TextView
             android:id="@+id/header"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#F8DB92"
+            android:layout_height="50dp"
             android:text="Dates you were absent"
             android:textColor="#0C0C0C"
+            android:background="#EABF53"
             android:textSize="30sp"
             android:textAppearance="@android:style/TextAppearance"/>
+
 
         <ListView
             android:id="@+id/listView"
